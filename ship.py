@@ -10,5 +10,16 @@ class Ship:
 
 		self.rect.midbottom = self.screen_rect.midbottom
 
+		self.settings = ai_game.settings
+
+		self.moving_right = False
+		self.moving_left = False
+
 	def draw_ship(self):
 		self.screen.blit(self.image, self.rect)
+
+	def update(self):
+		if self.moving_right:
+			self.rect.x += self.settings.ship_speed
+		elif self.moving_left:
+			self.rect.x -= self.settings.ship_speed
