@@ -27,3 +27,6 @@ class Ship:
 			self.rect.x -= self.settings.ship_speed
 			if self.rect.left < self.screen_rect.left:
 				self.rect.left = self.screen_rect.left
+
+	def center_ship(self):
+		self.rect.midbottom = self.screen_rect.midbottom
