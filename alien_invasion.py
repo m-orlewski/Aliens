@@ -1,3 +1,5 @@
+'''Main File'''
+
 import sys
 from time import sleep
 
@@ -18,7 +20,8 @@ class AlienInvasion:
 
 		self.settings = Settings()
 	
-		self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
+		self.screen = pygame.display.set_mode((self.settings.screen_width,
+			self.settings.screen_height))
 
 		self.stats = GameStats(self)
 
